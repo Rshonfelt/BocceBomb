@@ -1,0 +1,136 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (javaCalls.cpp:64), pid=3176, tid=6848
+#  guarantee(!thread->is_Compiler_thread()) failed: cannot make java calls from the compiler
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_79-b15) (build 1.7.0_79-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000b08f000):  JavaThread "C2 CompilerThread0" daemon [_thread_in_vm, id=6848, stack(0x000000000d3b0000,0x000000000d4b0000)]
+
+Stack: [0x000000000d3b0000,0x000000000d4b0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000b08d000 JavaThread "C2 CompilerThread1" daemon [_thread_in_vm, id=7836, stack(0x000000000d230000,0x000000000d330000)]
+=>0x000000000b08f000 JavaThread "C2 CompilerThread0" daemon [_thread_in_vm, id=6848, stack(0x000000000d3b0000,0x000000000d4b0000)]
+  0x00000000020de000 JavaThread "main" [_thread_in_vm, id=5964, stack(0x00000000023a0000,0x00000000024a0000)]
+
+Other Threads:
+  0x000000000b07d800 VMThread [stack: 0x000000000cf80000,0x000000000d080000] [id=3076]
+  0x000000000b098000 WatcherThread [stack: 0x000000000d100000,0x000000000d200000] [id=8168]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 76800K, used 1321K [0x00000007d5500000, 0x00000007daa80000, 0x0000000800000000)
+  eden space 66048K, 2% used [0x00000007d5500000,0x00000007d564a428,0x00000007d9580000)
+  from space 10752K, 0% used [0x00000007da000000,0x00000007da000000,0x00000007daa80000)
+  to   space 10752K, 0% used [0x00000007d9580000,0x00000007d9580000,0x00000007da000000)
+ ParOldGen       total 174592K, used 0K [0x0000000780000000, 0x000000078aa80000, 0x00000007d5500000)
+  object space 174592K, 0% used [0x0000000780000000,0x0000000780000000,0x000000078aa80000)
+ PSPermGen       total 21504K, used 2600K [0x000000077ae00000, 0x000000077c300000, 0x0000000780000000)
+  object space 21504K, 12% used [0x000000077ae00000,0x000000077b08a438,0x000000077c300000)
+
+Card table byte_map: [0x00000000054a0000,0x00000000058d0000] byte_map_base: 0x00000000018c9000
+
+Polling page: 0x0000000001b60000
+
+Code Cache  [0x00000000024a0000, 0x0000000002710000, 0x00000000054a0000)
+ total_blobs=168 nmethods=0 adapters=137 free_code_cache=48772Kb largest_free_block=49943232
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (1 events):
+Event: 0.025 Thread 0x00000000020de000 Threw 0x00000007d550a370 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jni.cpp:3991
+
+Events (10 events):
+Event: 0.052 loading class 0x000000000aee7c80 done
+Event: 0.052 loading class 0x000000000aef4670
+Event: 0.052 loading class 0x000000000aef4670 done
+Event: 0.053 loading class 0x000000000aead380
+Event: 0.053 loading class 0x000000000aead380 done
+Event: 0.053 Thread 0x00000000021df800 Thread added: 0x00000000021df800
+Event: 0.053 Thread 0x000000000b08d000 Thread added: 0x000000000b08d000
+Event: 0.053 Thread 0x00000000021df800 Thread exited: 0x00000000021df800
+Event: 0.053 Thread 0x000000000b08f000 Thread added: 0x000000000b08f000
+Event: 0.053 Thread 0x000000000b08d000 Thread exited: 0x000000000b08d000
+
+
+Dynamic libraries:
+0x000000013ff90000 - 0x000000013ffc3000 	C:\Program Files\Java\jdk1.7.0_79\bin\java.exe
+0x00000000772f0000 - 0x000000007749a000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000771d0000 - 0x00000000772ef000 	C:\Windows\system32\kernel32.dll
+0x000007fefd0a0000 - 0x000007fefd10a000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefd9a0000 - 0x000007fefda7b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefedf0000 - 0x000007fefee8f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff2a0000 - 0x000007feff2bf000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefebd0000 - 0x000007fefecfd000 	C:\Windows\system32\RPCRT4.dll
+0x00000000770d0000 - 0x00000000771ca000 	C:\Windows\system32\USER32.dll
+0x000007fefefa0000 - 0x000007feff007000 	C:\Windows\system32\GDI32.dll
+0x000007feff010000 - 0x000007feff01e000 	C:\Windows\system32\LPK.dll
+0x000007fefd5c0000 - 0x000007fefd68a000 	C:\Windows\system32\USP10.dll
+0x000007fefbab0000 - 0x000007fefbca4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefd920000 - 0x000007fefd991000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefef70000 - 0x000007fefef9e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefdd30000 - 0x000007fefde39000 	C:\Windows\system32\MSCTF.dll
+0x0000000059fb0000 - 0x000000005a082000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\msvcr100.dll
+0x00000000597d0000 - 0x0000000059fa5000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\server\jvm.dll
+0x000007fefb980000 - 0x000007fefb989000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefed00000 - 0x000007fefed4d000 	C:\Windows\system32\WS2_32.dll
+0x000007feff2c0000 - 0x000007feff2c8000 	C:\Windows\system32\NSI.dll
+0x000007fefaca0000 - 0x000007fefacdb000 	C:\Windows\system32\WINMM.dll
+0x00000000774c0000 - 0x00000000774c7000 	C:\Windows\system32\PSAPI.DLL
+0x000000005a160000 - 0x000000005a16f000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\verify.dll
+0x000000005a130000 - 0x000000005a158000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\java.dll
+0x000000005a110000 - 0x000000005a125000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Xmx2048M -Dfile.encoding=UTF8 
+java_command: C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer/Tools\sdktools.jar -
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\
+USERNAME=Robert
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 8 (8 cores per cpu, 1 threads per core) family 21 model 2 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 16775348k(12287004k free), swap 33548840k(27920084k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.79-b02) for windows-amd64 JRE (1.7.0_79-b15), built on Apr 10 2015 12:36:16 by "java_re" with unknown MS VC++:1600
+
+time: Sat Apr 30 22:53:36 2016
+elapsed time: 0 seconds
+

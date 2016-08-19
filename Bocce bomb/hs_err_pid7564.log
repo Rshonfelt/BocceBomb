@@ -1,0 +1,724 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000000269b282, pid=7564, tid=8644
+#
+# JRE version:  (7.0_79-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# j  java.lang.String.<clinit>()V+77
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000229e000):  JavaThread "Unknown thread" [_thread_in_Java, id=8644, stack(0x0000000002580000,0x0000000002680000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000060b24010
+
+Registers:
+RAX=0x0000000000000011, RBX=0x00000000000000a7, RCX=0x000000077ae0ad58, RDX=0xffffffffffffffb7
+RSP=0x000000000267f368, RBP=0x000000000267f3a8, RSI=0x000000077ae02de0, RDI=0x0000000002686215
+R8 =0x0000000016b27490, R9 =0x00000000000000df, R10=0x0000000058b318e0, R11=0x000000000267f350
+R12=0x0000000000000000, R13=0x000000077ae0aca5, R14=0x000000000267f400, R15=0x000000000229e000
+RIP=0x000000000269b282, EFLAGS=0x0000000000010216
+
+Top of Stack: (sp=0x000000000267f368)
+0x000000000267f368:   000000000267f368 000000077ae0ac8d
+0x000000000267f378:   000000000267f400 000000077aeae5c8
+0x000000000267f388:   0000000000000000 000000077ae0ad58
+0x000000000267f398:   0000000000000000 000000000267f408
+0x000000000267f3a8:   000000000267f4e0 000000000268061a
+0x000000000267f3b8:   00000000889124eb 0000000000000001
+0x000000000267f3c8:   0000000000000007 00000007d55036c0
+0x000000000267f3d8:   000000009d67a0be 00000007d55036c0
+0x000000000267f3e8:   00000154538cd7f8 0000000000000000
+0x000000000267f3f8:   0000d452e3e2b99d 0000000000000000
+0x000000000267f408:   0000000000000000 0000000000000000
+0x000000000267f418:   0000000000000000 0000000000000000
+0x000000000267f428:   0000000000000000 0000000000000000
+0x000000000267f438:   0000000000000000 0000000000000000
+0x000000000267f448:   0000000000000000 0000000000000000
+0x000000000267f458:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x000000000269b282)
+0x000000000269b262:   48 63 d2 4c 03 ea 85 d2 0f 89 43 00 00 00 8b 41
+0x000000000269b272:   40 83 c0 08 89 41 40 8b 41 3c 83 e0 f8 03 41 40
+0x000000000269b282:   3b 05 88 8d 48 5e 0f 8c 25 00 00 00 48 8b 45 e0
+0x000000000269b292:   48 85 c0 0f 84 2b 00 00 00 3b 1d 73 8d 48 56 0f 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000011 is an unknown value
+RBX=0x00000000000000a7 is an unknown value
+RCX=0x000000077ae0ad58 is an oop
+{method} 
+ - klass: {other class}
+RDX=0xffffffffffffffb7 is an unknown value
+RSP=0x000000000267f368 is pointing into the stack for thread: 0x000000000229e000
+RBP=0x000000000267f3a8 is pointing into the stack for thread: 0x000000000229e000
+RSI=0x000000077ae02de0 is an oop
+{constant pool} 
+ - klass: {other class}
+ - holder: 0x000000077ae0ae00
+ - cache: 0x000000077aeae5c8
+ -   1 :  : -2048144789
+ -   2 :  : -1028477387
+ -   3 :  : -862048943
+ -   4 :  : -430675100
+ -   5 :  : 55296
+ -   6 :  : 56319
+ -   7 :  : 57343
+ -   8 :  : 65536
+ -   9 :  : 461845907
+ -  10 :  : ".$|()[{^?*+\" {0xd55036f0}
+ -  11 :  : "az" {0xd5503730}
+ -  12 :  : "charset" {0xd5503760}
+ -  13 :  : "charsetName" {0xd5503798}
+ -  14 :  : "false" {0xd55037d8}
+ -  15 :  : "lt" {0xd5503810}
+ -  16 :  : "null" {0xd5502a68}
+ -  17 :  : "tr" {0xd5503840}
+ -  18 :  : "true" {0xd5503870}
+ -  19 :  : '()I'
+ -  20 :  : '()J'
+ -  21 :  : '()Ljava/lang/String;'
+ -  22 :  : '()V'
+ -  23 :  : '()Z'
+ -  24 :  : '()[B'
+ -  25 :  : '()[C'
+ -  26 :  : '(C)C'
+ -  27 :  : '(D)Ljava/lang/String;'
+ -  28 :  : '(I)C'
+ -  29 :  : '(I)I'
+ -  30 :  : '(I)Ljava/lang/String;'
+ -  31 :  : '(I)V'
+ -  32 :  : '(I)Z'
+ -  33 :  : '(I)[C'
+ -  34 :  : '(II)I'
+ -  35 :  : '(II)Ljava/lang/String;'
+ -  36 :  : '(II[BI)V'
+ -  37 :  : '(II[C)V'
+ -  38 :  : '(II[CI)V'
+ -  39 :  : '(I[CI)I'
+ -  40 :  : '(I[CI)V'
+ -  41 :  : '(I[CII)I'
+ -  42 :  : '(Ljava/lang/Object;)Z'
+ -  43 :  : '(Ljava/lang/String;)I'
+ -  44 :  : '(Ljava/lang/String;)Ljava/lang/String;'
+ -  45 :  : '(Ljava/lang/String;)V'
+ -  46 :  : '(Ljava/lang/String;)Z'
+ -  47 :  : '(Ljava/util/Locale;)V'
+ -  48 :  : '([B)V'
+ -  49 :  : '([BI)V'
+ -  50 :  : '([BII)V'
+ -  51 :  : '([BII)[C'
+ -  52 :  : '([BIII)V'
+ -  53 :  : '([C)V'
+ -  54 :  : '([CI)V'
+ -  55 :  : '([CI)[C'
+ -  56 :  : '([CII)I'
+ -  57 :  : '([CII)V'
+ -  58 :  : '([CII)[B'
+ -  59 :  : '([CII)[C'
+ -  60 :  : '([CIIII)I'
+ -  61 :  : '([CII[CIII)I'
+ -  62 :  : '([CZ)V'
+ -  63 :  : '([III)V'
+ -  64 :  : '.$|()[{^?*+\'
+ -  65 :  : '<clinit>'
+ -  66 :  : '<init>'
+ -  67 :  : 'CASE_INSENSITIVE_ORDER'
+ -  68 :  : 'Code'
+ -  69 :  : 'ConstantValue'
+ -  70 :  : 'Deprecated'
+ -  71 :  : 'Exceptions'
+ -  72 :  : 'HASHING_SEED'
+ -  73 :  : 'I'
+ -  74 :  : 'InnerClasses'
+ -  75 :  : 'J'
+ -  76 :  : 'LineNumberTable'
+ -  77 :  : 'RuntimeVisibleAnnotations'
+ -  78 :  : 'Signature'
+ -  79 :  : 'SourceFile'
+ -  80 :  : 'StackMapTable'
+ -  81 :  : '[B'
+ -  82 :  : '[C'
+ -  83 :  : '[I'
+ -  84 :  : '[Ljava/io/ObjectStreamField;'
+ -  85 :  : '[Ljava/lang/String;'
+ -  86 :  : 'add'
+ -  87 :  : 'arraycopy'
+ -  88 :  : 'az'
+ -  89 :  : 'charAt'
+ -  90 :  : 'charCount'
+ -  91 :  : 'charset'
+ -  92 :  : 'charsetName'
+ -  93 :  : 'checkBounds'
+ -  94 :  : 'codePointAt'
+ -  95 :  : 'codePointAtImpl'
+ -  96 :  : 'codePointBefore'
+ -  97 :  : 'codePointBeforeImpl'
+ -  98 :  : 'codePointCount'
+ -  99 :  : 'codePointCountImpl'
+ - 100 :  : 'compare'
+ - 101 :  : 'compareTo'
+ - 102 :  : 'compareToIgnoreCase'
+ - 103 :  : 'compile'
+ - 104 :  : 'concat'
+ - 105 :  : 'contains'
+ - 106 :  : 'contentEquals'
+ - 107 :  : 'copyOf'
+ - 108 :  : 'copyOfRange'
+ - 109 :  : 'copyValueOf'
+ - 110 :  : 'currentTimeMillis'
+ - 111 :  : 'decode'
+ - 112 :  : 'encode'
+ - 113 :  : 'endsWith'
+ - 114 :  : 'equals'
+ - 115 :  : 'equalsIgnoreCase'
+ - 116 :  : 'false'
+ - 117 :  : 'format'
+ - 118 :  : 'get'
+ - 119 :  : 'getBytes'
+ - 120 :  : 'getChars'
+ - 121 :  : 'getDefault'
+ - 122 :  : 'getLanguage'
+ - 123 :  : 'getValue'
+ - 124 :  : 'hash'
+ - 125 :  : 'hash32'
+ - 126 :  : 'hashCode'
+ - 127 :  : 'highSurrogate'
+ - 128 :  : 'identityHashCode'
+ - 129 :  : 'indexOf'
+ - 130 :  : 'indexOfSupplementary'
+ - 131 :  : 'intern'
+ - 132 :  : 'isBmpCodePoint'
+ - 133 :  : 'isEmpty'
+ - 134 :  : 'isValidCodePoint'
+ - 135 :  : 'java/io/ObjectStreamField'
+ - 136 :  : 'java/io/Serializable'
+ - 137 :  : 'java/io/UnsupportedEncodingException'
+ - 138 :  : 'java/lang/AbstractStringBuilder'
+ - 139 :  : 'java/lang/CharSequence'
+ - 140 :  : 'java/lang/Character'
+ - 141 :  : 'java/lang/Comparable'
+ - 142 :  : 'java/lang/ConditionalSpecialCasing'
+ - 143 :  : 'java/lang/Double'
+ - 144 :  : 'java/lang/Float'
+ - 145 :  : 'java/lang/IllegalArgumentException'
+ - 146 :  : 'java/lang/IndexOutOfBoundsException'
+ - 147 :  : 'java/lang/Integer'
+ - 148 :  : 'java/lang/Long'
+ - 149 :  : 'java/lang/Math'
+ - 150 :  : 'java/lang/NullPointerException'
+ - 151 :  : 'java/lang/Object'
+ - 152 :  : 'java/lang/String'
+ - 153 :  : 'java/lang/String$1'
+ - 154 :  : 'java/lang/String$CaseInsensitiveComparator'
+ - 155 :  : 'java/lang/StringBuffer'
+ - 156 :  : 'java/lang/StringBuilder'
+ - 157 :  : 'java/lang/StringCoding'
+ - 158 :  : 'java/lang/StringIndexOutOfBoundsException'
+ - 159 :  : 'java/lang/System'
+ - 160 :  : 'java/lang/Throwable'
+ - 161 :  : 'java/nio/charset/Charset'
+ - 162 :  : 'java/util/ArrayList'
+ - 163 :  : 'java/util/Arrays'
+ - 164 :  : 'java/util/Comparator'
+ - 165 :  : 'java/util/Formatter'
+ - 166 :  : 'java/util/List'
+ - 167 :  : 'java/util/Locale'
+ - 168 :  : 'java/util/regex/Matcher'
+ - 169 :  : 'java/util/regex/Pattern'
+ - 170 :  : 'lastIndexOf'
+ - 171 :  : 'lastIndexOfSupplementary'
+ - 172 :  : 'length'
+ - 173 :  : 'lowSurrogate'
+ - 174 :  : 'lt'
+ - 175 :  : 'matcher'
+ - 176 :  : 'matches'
+ - 177 :  : 'min'
+ - 178 :  : 'murmur3_32'
+ - 179 :  : 'nanoTime'
+ - 180 :  : 'null'
+ - 181 :  : 'offsetByCodePoints'
+ - 182 :  : 'offsetByCodePointsImpl'
+ - 183 :  : 'quoteReplacement'
+ - 184 :  : 'regionMatches'
+ - 185 :  : 'replace'
+ - 186 :  : 'replaceAll'
+ - 187 :  : 'replaceFirst'
+ - 188 :  : 'serialPersistentFields'
+ - 189 :  : 'serialVersionUID'
+ - 190 :  : 'size'
+ - 191 :  : 'split'
+ - 192 :  : 'startsWith'
+ - 193 :  : 'subList'
+ - 194 :  : 'subSequence'
+ - 195 :  : 'substring'
+ - 196 :  : 'sun/misc/Hashing'
+ - 197 :  : 'toArray'
+ - 198 :  : 'toCharArray'
+ - 199 :  : 'toChars'
+ - 200 :  : 'toLowerCase'
+ - 201 :  : 'toLowerCaseCharArray'
+ - 202 :  : 'toLowerCaseEx'
+ - 203 :  : 'toString'
+ - 204 :  : 'toSurrogates'
+ - 205 :  : 'toUpperCase'
+ - 206 :  : 'toUpperCaseCharArray'
+ - 207 :  : 'toUpperCaseEx'
+ - 208 :  : 'tr'
+ - 209 :  : 'trim'
+ - 210 :  : 'true'
+ - 211 :  : 'value'
+ - 212 :  : 'valueOf'
+ - 213 :  : -6849794470754667710
+ - 215 :  : '[B'
+ - 216 :  : '[C'
+ - 217 :  : '[I'
+ - 218 :  : '[Ljava/lang/String;'
+ - 219 :  : 'java/io/ObjectStreamField' {0x7aeb0d48}
+ - 220 :  : 'java/io/Serializable'
+ - 221 :  : 'java/io/UnsupportedEncodingException'
+ - 222 :  : 'java/lang/AbstractStringBuilder'
+ - 223 :  : 'java/lang/CharSequence'
+ - 224 :  : 'java/lang/Character'
+ - 225 :  : 'java/lang/Comparable'
+ - 226 :  : 'java/lang/ConditionalSpecialCasing'
+ - 227 :  : 'java/lang/Double'
+ - 228 :  : 'java/lang/Float'
+ - 229 :  : 'java/lang/IllegalArgumentException'
+ - 230 :  : 'java/lang/IndexOutOfBoundsException'
+ - 231 :  : 'java/lang/Integer'
+ - 232 :  : 'java/lang/Long'
+ - 233 :  : 'java/lang/Math'
+ - 234 :  : 'java/lang/NullPointerException'
+ - 235 :  : 'java/lang/Object'
+ - 236 :  : 'java/lang/String' {0x7ae0ae00}
+ - 237 :  : 'java/lang/String$1'
+ - 238 :  : 'java/lang/String$CaseInsensitiveComparator' {0x7aeb1fb0}
+ - 239 :  : 'java/lang/StringBuffer'
+ - 240 :  : 'java/lang/StringBuilder'
+ - 241 :  : 'java/lang/StringCoding'
+ - 242 :  : 'java/lang/StringIndexOutOfBoundsException'
+ - 243 :  : 'java/lang/System' {0x7ae20808}
+ - 244 :  : 'java/lang/Throwable'
+ - 245 :  : 'java/nio/charset/Charset'
+ - 246 :  : 'java/util/ArrayList'
+ - 247 :  : 'java/util/Arrays'
+ - 248 :  : 'java/util/Comparator'
+ - 249 :  : 'java/util/Formatter'
+ - 250 :  : 'java/util/List'
+ - 251 :  : 'java/util/Locale'
+ - 252 :  : 'java/util/regex/Matcher'
+ - 253 :  : 'java/util/regex/Pattern'
+ - 254 :  : 'sun/misc/Hashing'
+ - 255 :  : 'Ljava/lang/Deprecated;'
+ - 256 :  : 'Ljava/util/Comparator;'
+ - 257 :  : 'Ljava/util/Comparator<Ljava/lang/String;>;'
+ - 258 :  : 'Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/Comparable<Ljava/lang/String;>;Ljava/lang/CharSequence;'
+ - 259 :  : '(II)Ljava/lang/CharSequence;'
+ - 260 :  : '(Ljava/lang/CharSequence;)Z'
+ - 261 :  : '(I)Ljava/lang/Object;'
+ - 262 :  : '(Ljava/lang/Object;)I'
+ - 263 :  : '(C)Ljava/lang/String;'
+ - 264 :  : '(CC)Ljava/lang/String;'
+ - 265 :  : '(F)Ljava/lang/String;'
+ - 266 :  : '(ILjava/lang/String;II)Z'
+ - 267 :  : '(J)Ljava/lang/String;'
+ - 268 :  : '(Ljava/lang/String;)[B'
+ - 269 :  : '(Ljava/lang/String;I)I'
+ - 270 :  : '(Ljava/lang/String;I)Z'
+ - 271 :  : '(Ljava/lang/String;[BII)[C'
+ - 272 :  : '(Ljava/lang/String;[CII)[B'
+ - 273 :  : '(Z)Ljava/lang/String;'
+ - 274 :  : '(ZILjava/lang/String;II)Z'
+ - 275 :  : '([BIILjava/lang/String;)V'
+ - 276 :  : '([BLjava/lang/String;)V'
+ - 277 :  : '([C)Ljava/lang/String;'
+ - 278 :  : '([CII)Ljava/lang/String;'
+ - 279 :  : '(Ljava/lang/String$1;)V'
+ - 280 :  : '(Ljava/lang/StringBuffer;)V'
+ - 281 :  : '(Ljava/lang/StringBuffer;)Z'
+ - 282 :  : '(Ljava/lang/StringBuilder;)V'
+ - 283 :  : '(Ljava/nio/charset/Charset;)[B'
+ - 284 :  : '(Ljava/nio/charset/Charset;[BII)[C'
+ - 285 :  : '(Ljava/nio/charset/Charset;[CII)[B'
+ - 286 :  : '([BIILjava/nio/charset/Charset;)V'
+ - 287 :  : '([BLjava/nio/charset/Charset;)V'
+ - 288 :  : '(II)Ljava/util/List;'
+ - 289 :  : '()Ljava/util/Locale;'
+ - 290 :  : '(Ljava/lang/String;Ljava/lang/CharSequence;)Z'
+ - 291 :  : '(Ljava/lang/Object;ILjava/lang/Object;II)V'
+ - 292 :  : '(Ljava/lang/Object;Ljava/lang/Object;)I'
+ - 293 :  : '([Ljava/lang/Object;)[Ljava/lang/Object;'
+ - 294 :  : '(Ljava/lang/CharSequence;I)[Ljava/lang/String;'
+ - 295 :  : '(Ljava/lang/Object;)Ljava/lang/String;'
+ - 296 :  : '(Ljava/lang/String;)[Ljava/lang/String;'
+ - 297 :  : '(Ljava/lang/String;I)[Ljava/lang/String;'
+ - 298 :  : '(Ljava/util/Locale;)Ljava/lang/String;'
+ - 299 :  : '(Ljava/lang/String;ILjava/util/Locale;)I'
+ - 300 :  : '(Ljava/lang/String;ILjava/util/Locale;)[C'
+ - 301 :  : '(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;'
+ - 302 :  : '(Ljava/lang/String;)Ljava/util/regex/Pattern;'
+ - 303 :  : '(Ljava/lang/String;I)Ljava/util/regex/Pattern;'
+ - 304 :  : '(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;'
+ - 305 :  : '(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;'
+ - 306 :  : '(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;'
+ - 307 :  : '(Ljava/lang/String;[Ljava/lang/Object;)Ljava/util/Formatter;'
+ - 308 :  : '(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;'
+ - 309 :  : name_index=72 signature_index=73
+ - 310 :  : name_index=124 signature_index=73
+ - 311 :  : name_index=125 signature_index=73
+ - 312 :  : name_index=211 signature_index=82
+ - 313 :  : name_index=188 signature_index=84
+ - 314 :  : name_index=67 signature_index=256
+ - 315 :  : name_index=172 signature_index=19
+ - 316 :  : name_index=190 signature_index=19
+ - 317 :  : name_index=110 signature_index=20
+ - 318 :  : name_index=179 signature_index=20
+ - 319 :  : name_index=66 signature_index=22
+ - 320 :  : name_index=123 signature_index=25
+ - 321 :  : name_index=200 signature_index=26
+ - 322 :  : name_index=205 signature_index=26
+ - 323 :  : name_index=89 signature_index=28
+ - 324 :  : name_index=127 signature_index=28
+ - 325 :  : name_index=173 signature_index=28
+ - 326 :  : name_index=90 signature_index=29
+ - 327 :  : name_index=94 signature_index=29
+ - 328 :  : name_index=129 signature_index=29
+ - 329 :  : name_index=200 signature_index=29
+ - 330 :  : name_index=207 signature_index=29
+ - 331 :  : name_index=66 signature_index=31
+ - 332 :  : name_index=132 signature_index=32
+ - 333 :  : name_index=134 signature_index=32
+ - 334 :  : name_index=199 signature_index=33
+ - 335 :  : name_index=206 signature_index=33
+ - 336 :  : name_index=129 signature_index=34
+ - 337 :  : name_index=130 signature_index=34
+ - 338 :  : name_index=170 signature_index=34
+ - 339 :  : name_index=171 signature_index=34
+ - 340 :  : name_index=177 signature_index=34
+ - 341 :  : name_index=199 signature_index=39
+ - 342 :  : name_index=204 signature_index=40
+ - 343 :  : name_index=178 signature_index=41
+ - 344 :  : name_index=66 signature_index=50
+ - 345 :  : name_index=93 signature_index=50
+ - 346 :  : name_index=111 signature_index=51
+ - 347 :  : name_index=66 signature_index=52
+ - 348 :  : name_index=66 signature_index=53
+ - 349 :  : name_index=120 signature_index=54
+ - 350 :  : name_index=107 signature_index=55
+ - 351 :  : name_index=95 signature_index=56
+ - 352 :  : name_index=97 signature_index=56
+ - 353 :  : name_index=99 signature_index=56
+ - 354 :  : name_index=66 signature_index=57
+ - 355 :  : name_index=112 signature_index=58
+ - 356 :  : name_index=108 signature_index=59
+ - 357 :  : name_index=182 signature_index=60
+ - 358 :  : name_index=129 signature_index=61
+ - 359 :  : name_index=170 signature_index=61
+ - 360 :  : name_index=66 signature_index=62
+ - 361 :  : name_index=106 signature_index=260
+ - 362 :  : name_index=118 signature_index=261
+ - 363 :  : name_index=128 signature_index=262
+ - 364 :  : name_index=86 signature_index=42
+ - 365 :  : name_index=114 signature_index=42
+ - 366 :  : name_index=122 signature_index=21
+ - 367 :  : name_index=203 signature_index=21
+ - 368 :  : name_index=203 signature_index=27
+ - 369 :  : name_index=203 signature_index=265
+ - 370 :  : name_index=203 signature_index=30
+ - 371 :  : name_index=195 signature_index=35
+ - 372 :  : name_index=203 signature_index=267
+ - 373 :  : name_index=101 signature_index=43
+ - 374 :  : name_index=129 signature_index=43
+ - 375 :  : name_index=66 signature_index=45
+ - 376 :  : name_index=129 signature_index=269
+ - 377 :  : name_index=170 signature_index=269
+ - 378 :  : name_index=192 signature_index=270
+ - 379 :  : name_index=111 signature_index=271
+ - 380 :  : name_index=112 signature_index=272
+ - 381 :  : name_index=184 signature_index=274
+ - 382 :  : name_index=66 signature_index=275
+ - 383 :  : name_index=66 signature_index=279
+ - 384 :  : name_index=111 signature_index=284
+ - 385 :  : name_index=112 signature_index=285
+ - 386 :  : name_index=66 signature_index=286
+ - 387 :  : name_index=193 signature_index=288
+ - 388 :  : name_index=121 signature_index=289
+ - 389 :  : name_index=66 signature_index=47
+ - 390 :  : name_index=176 signature_index=290
+ - 391 :  : name_index=87 signature_index=291
+ - 392 :  : name_index=100 signature_index=292
+ - 393 :  : name_index=197 signature_index=293
+ - 394 :  : name_index=191 signature_index=294
+ - 395 :  : name_index=183 signature_index=44
+ - 396 :  : name_index=186 signature_index=44
+ - 397 :  : name_index=187 signature_index=44
+ - 398 :  : name_index=191 signature_index=297
+ - 399 :  : name_index=200 signature_index=298
+ - 400 :  : name_index=205 signature_index=298
+ - 401 :  : name_index=202 signature_index=299
+ - 402 :  : name_index=207 signature_index=299
+ - 403 :  : name_index=201 signature_index=300
+ - 404 :  : name_index=206 signature_index=300
+ - 405 :  : name_index=175 signature_index=301
+ - 406 :  : name_index=103 signature_index=302
+ - 407 :  : name_index=103 signature_index=303
+ - 408 :  : name_index=117 signature_index=307
+ - 409 :  : klass_index=236 name_and_type_index=309
+ - 410 :  : klass_index=236 name_and_type_index=310
+ - 411 :  : klass_index=236 name_and_type_index=311
+ - 412 :  : klass_index=236 name_and_type_index=312
+ - 413 :  : klass_index=236 name_and_type_index=313
+ - 414 :  : klass_index=236 name_and_type_index=314
+ - 415 :  : klass_index=222 name_and_type_index=320
+ - 416 :  : klass_index=224 name_and_type_index=321
+ - 417 :  : klass_index=224 name_and_type_index=322
+ - 418 :  : klass_index=224 name_and_type_index=324
+ - 419 :  : klass_index=224 name_and_type_index=325
+ - 420 :  : klass_index=224 name_and_type_index=326
+ - 421 :  : klass_index=224 name_and_type_index=329
+ - 422 :  : klass_index=224 name_and_type_index=330
+ - 423 :  : klass_index=224 name_and_type_index=332
+ - 424 :  : klass_index=224 name_and_type_index=333
+ - 425 :  : klass_index=224 name_and_type_index=334
+ - 426 :  : klass_index=224 name_and_type_index=335
+ - 427 :  : klass_index=224 name_and_type_index=341
+ - 428 :  : klass_index=224 name_and_type_index=342
+ - 429 :  : klass_index=224 name_and_type_index=351
+ - 430 :  : klass_index=224 name_and_type_index=352
+ - 431 :  : klass_index=224 name_and_type_index=353
+ - 432 :  : klass_index=224 name_and_type_index=357
+ - 433 :  : klass_index=226 name_and_type_index=401
+ - 434 :  : klass_index=226 name_and_type_index=402
+ - 435 :  : klass_index=226 name_and_type_index=403
+ - 436 :  : klass_index=226 name_and_type_index=404
+ - 437 :  : klass_index=227 name_and_type_index=368
+ - 438 :  : klass_index=228 name_and_type_index=369
+ - 439 :  : klass_index=229 name_and_type_index=375
+ - 440 :  : klass_index=230 name_and_type_index=319
+ - 441 :  : klass_index=231 name_and_type_index=370
+ - 442 :  : klass_index=232 name_and_type_index=372
+ - 443 :  : klass_index=233 name_and_type_index=340
+ - 444 :  : klass_index=234 name_and_type_index=319
+ - 445 :  : klass_index=234 name_and_type_index=375
+ - 446 :  : klass_index=235 name_and_type_index=319
+ - 447 :  : klass_index=235 name_and_type_index=365
+ - 448 :  : klass_index=235 name_and_type_index=367
+ - 449 :  : klass_index=236 name_and_type_index=315
+ - 450 :  : klass_index=236 name_and_type_index=323
+ - 451 :  : klass_index=236 name_and_type_index=327
+ - 452 :  : klass_index=236 name_and_type_index=328
+ - 453 :  : klass_index=236 name_and_type_index=336
+ - 454 :  : klass_index=236 name_and_type_index=337
+ - 455 :  : klass_index=236 name_and_type_index=338
+ - 456 :  : klass_index=236 name_and_type_index=339
+ - 457 :  : klass_index=236 name_and_type_index=344
+ - 458 :  : klass_index=236 name_and_type_index=345
+ - 459 :  : klass_index=236 name_and_type_index=347
+ - 460 :  : klass_index=236 name_and_type_index=348
+ - 461 :  : klass_index=236 name_and_type_index=349
+ - 462 :  : klass_index=236 name_and_type_index=354
+ - 463 :  : klass_index=236 name_and_type_index=358
+ - 464 :  : klass_index=236 name_and_type_index=359
+ - 465 :  : klass_index=236 name_and_type_index=360
+ - 466 :  : klass_index=236 name_and_type_index=361
+ - 467 :  : klass_index=236 name_and_type_index=371
+ - 468 :  : klass_index=236 name_and_type_index=373
+ - 469 :  : klass_index=236 name_and_type_index=374
+ - 470 :  : klass_index=236 name_and_type_index=376
+ - 471 :  : klass_index=236 name_and_type_index=377
+ - 472 :  : klass_index=236 name_and_type_index=378
+ - 473 :  : klass_index=236 name_and_type_index=381
+ - 474 :  : klass_index=236 name_and_type_index=382
+ - 475 :  : klass_index=236 name_and_type_index=386
+ - 476 :  : klass_index=236 name_and_type_index=398
+ - 477 :  : klass_index=236 name_and_type_index=399
+ - 478 :  : klass_index=236 name_and_type_index=400
+ - 479 :  : klass_index=238 name_and_type_index=383
+ - 480 :  : klass_index=239 name_and_type_index=315
+ - 481 :  : klass_index=239 name_and_type_index=320
+ - 482 :  : klass_index=240 name_and_type_index=315
+ - 483 :  : klass_index=240 name_and_type_index=320
+ - 484 :  : klass_index=241 name_and_type_index=346
+ - 485 :  : klass_index=241 name_and_type_index=355
+ - 486 :  : klass_index=241 name_and_type_index=379
+ - 487 :  : klass_index=241 name_and_type_index=380
+ - 488 :  : klass_index=241 name_and_type_index=384
+ - 489 :  : klass_index=241 name_and_type_index=385
+ - 490 :  : klass_index=242 name_and_type_index=331
+ - 491 :  : klass_index=243 name_and_type_index=317
+ - 492 :  : klass_index=243 name_and_type_index=318
+ - 493 :  : klass_index=243 name_and_type_index=363
+ - 494 :  : klass_index=243 name_and_type_index=391
+ - 495 :  : klass_index=246 name_and_type_index=316
+ - 496 :  : klass_index=246 name_and_type_index=319
+ - 497 :  : klass_index=246 name_and_type_index=362
+ - 498 :  : klass_index=246 name_and_type_index=364
+ - 499 :  : klass_index=246 name_and_type_index=387
+ - 500 :  : klass_index=247 name_and_type_index=350
+ - 501 :  : klass_index=247 name_and_type_index=356
+ - 502 :  : klass_index=249 name_and_type_index=319
+ - 503 :  : klass_index=249 name_and_type_index=367
+ - 504 :  : klass_index=249 name_and_type_index=389
+ - 505 :  : klass_index=249 name_and_type_index=408
+ - 506 :  : klass_index=251 name_and_type_index=366
+ - 507 :  : klass_index=251 name_and_type_index=388
+ - 508 :  : klass_index=252 name_and_type_index=395
+ - 509 :  : klass_index=252 name_and_type_index=396
+ - 510 :  : klass_index=252 name_and_type_index=397
+ - 511 :  : klass_index=253 name_and_type_index=390
+ - 512 :  : klass_index=253 name_and_type_index=394
+ - 513 :  : klass_index=253 name_and_type_index=405
+ - 514 :  : klass_index=253 name_and_type_index=406
+ - 515 :  : klass_index=253 name_and_type_index=407
+ - 516 :  : klass_index=254 name_and_type_index=343
+ - 517 :  : klass_index=223 name_and_type_index=315
+ - 518 :  : klass_index=223 name_and_type_index=323
+ - 519 :  : klass_index=223 name_and_type_index=367
+ - 520 :  : klass_index=248 name_and_type_index=392
+ - 521 :  : klass_index=250 name_and_type_index=393
+ - 522 :  : 'CaseInsensitiveComparator'
+ - 523 :  : 'String.java'
+
+RDI=0x0000000002686215 is at code_begin+2805 in an Interpreter codelet
+return entry points  [0x0000000002685720, 0x0000000002687520]  7680 bytes
+R8 =0x0000000016b27490 is an unknown value
+R9 =0x00000000000000df is an unknown value
+R10=0x0000000058b318e0 is an unknown value
+R11=0x000000000267f350 is pointing into the stack for thread: 0x000000000229e000
+R12=0x0000000000000000 is an unknown value
+R13=0x000000077ae0aca5 is pointing into object: 0x000000077ae0ac00
+{constMethod} 
+ - klass: {other class}
+ - constants:       0x000000077ae02de0 constant pool [524] for 'java/lang/String' cache=0x000000077aeae5c8
+bci_from(000000077AE0ACA5) = 101; print_codes():
+R14=0x000000000267f400 is pointing into the stack for thread: 0x000000000229e000
+R15=0x000000000229e000 is a thread
+
+
+Stack: [0x0000000002580000,0x0000000002680000],  sp=0x000000000267f368,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+j  java.lang.String.<clinit>()V+77
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1cf7f3]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x000000000229e000 JavaThread "Unknown thread" [_thread_in_Java, id=8644, stack(0x0000000002580000,0x0000000002680000)]
+
+Other Threads:
+  0x000000000b19d000 VMThread [stack: 0x000000000d2c0000,0x000000000d3c0000] [id=7048]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 76800K, used 1321K [0x00000007d5500000, 0x00000007daa80000, 0x0000000800000000)
+  eden space 66048K, 2% used [0x00000007d5500000,0x00000007d564a428,0x00000007d9580000)
+  from space 10752K, 0% used [0x00000007da000000,0x00000007da000000,0x00000007daa80000)
+  to   space 10752K, 0% used [0x00000007d9580000,0x00000007d9580000,0x00000007da000000)
+ ParOldGen       total 174592K, used 0K [0x0000000780000000, 0x000000078aa80000, 0x00000007d5500000)
+  object space 174592K, 0% used [0x0000000780000000,0x0000000780000000,0x000000078aa80000)
+ PSPermGen       total 21504K, used 715K [0x000000077ae00000, 0x000000077c300000, 0x0000000780000000)
+  object space 21504K, 3% used [0x000000077ae00000,0x000000077aeb2c70,0x000000077c300000)
+
+Card table byte_map: [0x0000000005680000,0x0000000005ab0000] byte_map_base: 0x0000000001aa9000
+
+Polling page: 0x0000000000130000
+
+Code Cache  [0x0000000002680000, 0x00000000028f0000, 0x0000000005680000)
+ total_blobs=55 nmethods=0 adapters=32 free_code_cache=48828Kb largest_free_block=50000256
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.021 loading class 0x000000000afc1200 done
+Event: 0.021 loading class 0x000000000afc0e20
+Event: 0.021 loading class 0x000000000afc0e20 done
+Event: 0.022 Thread 0x000000000229e000 Thread added: 0x000000000229e000
+Event: 0.022 loading class 0x000000000afc6920
+Event: 0.022 loading class 0x000000000afc6920 done
+Event: 0.022 loading class 0x000000000afc6a20
+Event: 0.022 loading class 0x000000000afc6ae0
+Event: 0.022 loading class 0x000000000afc6ae0 done
+Event: 0.022 loading class 0x000000000afc6a20 done
+
+
+Dynamic libraries:
+0x000000013f490000 - 0x000000013f4c3000 	C:\Program Files\Java\jdk1.7.0_79\bin\java.exe
+0x00000000779b0000 - 0x0000000077b5a000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077790000 - 0x00000000778af000 	C:\Windows\system32\kernel32.dll
+0x000007fefda70000 - 0x000007fefdada000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefdaf0000 - 0x000007fefdbcb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feffc00000 - 0x000007feffc9f000 	C:\Windows\system32\msvcrt.dll
+0x000007feffca0000 - 0x000007feffcbf000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff590000 - 0x000007feff6bd000 	C:\Windows\system32\RPCRT4.dll
+0x00000000778b0000 - 0x00000000779aa000 	C:\Windows\system32\USER32.dll
+0x000007feff7a0000 - 0x000007feff807000 	C:\Windows\system32\GDI32.dll
+0x000007fefe1c0000 - 0x000007fefe1ce000 	C:\Windows\system32\LPK.dll
+0x000007feffab0000 - 0x000007feffb7a000 	C:\Windows\system32\USP10.dll
+0x000007fefc140000 - 0x000007fefc334000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefe3b0000 - 0x000007fefe421000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe7d0000 - 0x000007fefe7fe000 	C:\Windows\system32\IMM32.DLL
+0x000007feff9a0000 - 0x000007feffaa9000 	C:\Windows\system32\MSCTF.dll
+0x000000006bd20000 - 0x000000006bdf2000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\msvcr100.dll
+0x00000000583e0000 - 0x0000000058bb5000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\server\jvm.dll
+0x000007fef8840000 - 0x000007fef8849000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefe490000 - 0x000007fefe4dd000 	C:\Windows\system32\WS2_32.dll
+0x000007fefdc70000 - 0x000007fefdc78000 	C:\Windows\system32\NSI.dll
+0x000007fefb360000 - 0x000007fefb39b000 	C:\Windows\system32\WINMM.dll
+0x0000000077b80000 - 0x0000000077b87000 	C:\Windows\system32\PSAPI.DLL
+0x000000006bd10000 - 0x000000006bd1f000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\verify.dll
+0x000000006bce0000 - 0x000000006bd08000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\java.dll
+0x000000006bcc0000 - 0x000000006bcd5000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\zip.dll
+0x000007fef9090000 - 0x000007fef91b5000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Xmx2048M -Dcom.android.sdkmanager.toolsdir=C:/Users/Robert/AppData/Local/Android/sdk\tools -Dfile.encoding=UTF8 
+java_command: C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer/Tools\sdktools.jar -
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\
+USERNAME=Robert
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 8 (8 cores per cpu, 1 threads per core) family 21 model 2 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 16775348k(11583164k free), swap 33548840k(27416112k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.79-b02) for windows-amd64 JRE (1.7.0_79-b15), built on Apr 10 2015 12:36:16 by "java_re" with unknown MS VC++:1600
+
+time: Tue Apr 26 13:10:19 2016
+elapsed time: 0 seconds
+

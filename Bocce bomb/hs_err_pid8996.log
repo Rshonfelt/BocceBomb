@@ -1,0 +1,801 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ILLEGAL_INSTRUCTION (0xc000001d) at pc=0x0000000002376985, pid=8996, tid=1964
+#
+# JRE version:  (7.0_79-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# j  java.util.Hashtable.putAll(Ljava/util/Map;)V+1
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001c5e000):  JavaThread "main" [_thread_in_Java, id=1964, stack(0x00000000021d0000,0x00000000022d0000)]
+
+siginfo: ExceptionCode=0xc000001d
+
+Registers:
+RAX=0x00000007d5508b18, RBX=0x00000000022cf070, RCX=0x0000000000000001, RDX=0x00000000022cf020
+RSP=0x00000000022cf070, RBP=0x00000000022cf0c8, RSI=0x000000077aedcbc0, RDI=0x0000000000000020
+R8 =0x00000000000000b5, R9 =0x00000000000000cb, R10=0x00000000583518e0, R11=0x000000000000000c
+R12=0x0000000000000000, R13=0x0000000002376981, R14=0x00000000022cf070, R15=0x0000000001c5e000
+RIP=0x0000000002376985, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x00000000022cf070)
+0x00000000022cf070:   00000007d5504a08 0000000000000001
+0x00000000022cf080:   00000007d564a4d8 00000000022cf078
+0x00000000022cf090:   000000077ae41381 00000000022cf0f0
+0x00000000022cf0a0:   000000077aecfdc0 0000000000000000
+0x00000000022cf0b0:   000000077ae413c0 00000000022cf070
+0x00000000022cf0c0:   00000000022cf0e8 00000000022cf138
+0x00000000022cf0d0:   00000000023760f8 0000000000000000
+0x00000000022cf0e0:   0000000000000000 00000007d5504a08
+0x00000000022cf0f0:   00000007d564a4d8 00000000022cf0f8
+0x00000000022cf100:   000000077aed2c24 00000000022cf160
+0x00000000022cf110:   000000077aed3a68 0000000000000000
+0x00000000022cf120:   000000077aed2cf0 00000000022cf0e8
+0x00000000022cf130:   00000000022cf160 00000000022cf1a8
+0x00000000022cf140:   00000000023760f8 0000000000000000
+0x00000000022cf150:   0000000000000000 0000000000000000
+0x00000000022cf160:   00000007d5504a08 00000000022cf168 
+
+Instructions: (pc=0x0000000002376985)
+0x0000000002376965:   ba e0 f0 34 58 00 00 00 00 41 ff 24 da 41 8b 4d
+0x0000000002376975:   01 f7 d1 48 8b 5d d8 c1 e1 02 eb cc 48 8b 65 f0
+0x0000000002376985:   48 c7 4d f0 00 00 00 00 4c 8b 6d c8 4c 8b 75 d0
+0x0000000002376995:   41 80 7d 00 ba 0f 84 31 00 00 00 41 0f b7 4d 01 
+
+
+Register to memory mapping:
+
+RAX=0x00000007d5508b18 is an oop
+java.util.Collections$SynchronizedSet 
+ - klass: 'java/util/Collections$SynchronizedSet'
+RBX=0x00000000022cf070 is pointing into the stack for thread: 0x0000000001c5e000
+RCX=0x0000000000000001 is an unknown value
+RDX=0x00000000022cf020 is pointing into the stack for thread: 0x0000000001c5e000
+RSP=0x00000000022cf070 is pointing into the stack for thread: 0x0000000001c5e000
+RBP=0x00000000022cf0c8 is pointing into the stack for thread: 0x0000000001c5e000
+RSI=0x000000077aedcbc0 is an oop
+{constant pool} 
+ - klass: {other class}
+ - holder: 0x000000077aee2a08
+ - cache: 0x000000077aee2c38
+ -   1 :  : "List length = " {0xd5508b30}
+ -   2 :  : "Source does not fit in dest" {0xd5508b78}
+ -   3 :  : '()I'
+ -   4 :  : '()Ljava/lang/String;'
+ -   5 :  : '()V'
+ -   6 :  : '()Z'
+ -   7 :  : '(I)I'
+ -   8 :  : '(Ljava/lang/Object;)Z'
+ -   9 :  : '(Ljava/lang/String;)V'
+ -  10 :  : '<clinit>'
+ -  11 :  : '<init>'
+ -  12 :  : 'BINARYSEARCH_THRESHOLD'
+ -  13 :  : 'COPY_THRESHOLD'
+ -  14 :  : 'Code'
+ -  15 :  : 'ConstantValue'
+ -  16 :  : 'EMPTY_ENUMERATION'
+ -  17 :  : 'EMPTY_ITERATOR'
+ -  18 :  : 'EMPTY_LIST'
+ -  19 :  : 'EMPTY_MAP'
+ -  20 :  : 'EMPTY_SET'
+ -  21 :  : 'EmptyList'
+ -  22 :  : 'FILL_THRESHOLD'
+ -  23 :  : 'I'
+ -  24 :  : 'INDEXOFSUBLIST_THRESHOLD'
+ -  25 :  : 'InnerClasses'
+ -  26 :  : 'LineNumberTable'
+ -  27 :  : 'List length = '
+ -  28 :  : 'REPLACEALL_THRESHOLD'
+ -  29 :  : 'REVERSE_ORDER'
+ -  30 :  : 'REVERSE_THRESHOLD'
+ -  31 :  : 'ROTATE_THRESHOLD'
+ -  32 :  : 'RuntimeVisibleAnnotations'
+ -  33 :  : 'SHUFFLE_THRESHOLD'
+ -  34 :  : 'Signature'
+ -  35 :  : 'Source does not fit in dest'
+ -  36 :  : 'SourceFile'
+ -  37 :  : 'StackMapTable'
+ -  38 :  : '[Ljava/lang/Object;'
+ -  39 :  : 'add'
+ -  40 :  : 'addAll'
+ -  41 :  : 'append'
+ -  42 :  : 'asLifoQueue'
+ -  43 :  : 'binarySearch'
+ -  44 :  : 'checkedCollection'
+ -  45 :  : 'checkedList'
+ -  46 :  : 'checkedMap'
+ -  47 :  : 'checkedSet'
+ -  48 :  : 'checkedSortedMap'
+ -  49 :  : 'checkedSortedSet'
+ -  50 :  : 'cmp'
+ -  51 :  : 'compare'
+ -  52 :  : 'compareTo'
+ -  53 :  : 'contains'
+ -  54 :  : 'copy'
+ -  55 :  : 'disjoint'
+ -  56 :  : 'emptyEnumeration'
+ -  57 :  : 'emptyIterator'
+ -  58 :  : 'emptyList'
+ -  59 :  : 'emptyListIterator'
+ -  60 :  : 'emptyMap'
+ -  61 :  : 'emptySet'
+ -  62 :  : 'enumeration'
+ -  63 :  : 'eq'
+ -  64 :  : 'equals'
+ -  65 :  : 'fill'
+ -  66 :  : 'frequency'
+ -  67 :  : 'get'
+ -  68 :  : 'hasMoreElements'
+ -  69 :  : 'hasNext'
+ -  70 :  : 'indexOfSubList'
+ -  71 :  : 'indexedBinarySearch'
+ -  72 :  : 'iterator'
+ -  73 :  : 'iteratorBinarySearch'
+ -  74 :  : 'java/lang/Comparable'
+ -  75 :  : 'java/lang/IllegalArgumentException'
+ -  76 :  : 'java/lang/IndexOutOfBoundsException'
+ -  77 :  : 'java/lang/Object'
+ -  78 :  : 'java/lang/StringBuilder'
+ -  79 :  : 'java/lang/reflect/Array'
+ -  80 :  : 'java/util/ArrayList'
+ -  81 :  : 'java/util/Arrays'
+ -  82 :  : 'java/util/Collection'
+ -  83 :  : 'java/util/Collections'
+ -  84 :  : 'java/util/Collections$1'
+ -  85 :  : 'java/util/Collections$2'
+ -  86 :  : 'java/util/Collections$AsLIFOQueue'
+ -  87 :  : 'java/util/Collections$CheckedCollection'
+ -  88 :  : 'java/util/Collections$CheckedList'
+ -  89 :  : 'java/util/Collections$CheckedMap'
+ -  90 :  : 'java/util/Collections$CheckedRandomAccessList'
+ -  91 :  : 'java/util/Collections$CheckedSet'
+ -  92 :  : 'java/util/Collections$CheckedSortedMap'
+ -  93 :  : 'java/util/Collections$CheckedSortedSet'
+ -  94 :  : 'java/util/Collections$CopiesList'
+ -  95 :  : 'java/util/Collections$EmptyEnumeration'
+ -  96 :  : 'java/util/Collections$EmptyIterator'
+ -  97 :  : 'java/util/Collections$EmptyList'
+ -  98 :  : 'java/util/Collections$EmptyListIterator'
+ -  99 :  : 'java/util/Collections$EmptyMap'
+ - 100 :  : 'java/util/Collections$EmptySet'
+ - 101 :  : 'java/util/Collections$ReverseComparator'
+ - 102 :  : 'java/util/Collections$ReverseComparator2'
+ - 103 :  : 'java/util/Collections$SelfComparable'
+ - 104 :  : 'java/util/Collections$SetFromMap'
+ - 105 :  : 'java/util/Collections$SingletonList'
+ - 106 :  : 'java/util/Collections$SingletonMap'
+ - 107 :  : 'java/util/Collections$SingletonSet'
+ - 108 :  : 'java/util/Collections$SynchronizedCollection'
+ - 109 :  : 'java/util/Collections$SynchronizedList'
+ - 110 :  : 'java/util/Collections$SynchronizedMap'
+ - 111 :  : 'java/util/Collections$SynchronizedRandomAccessList'
+ - 112 :  : 'java/util/Collections$SynchronizedSet'
+ - 113 :  : 'java/util/Collections$SynchronizedSortedMap'
+ - 114 :  : 'java/util/Collections$SynchronizedSortedSet'
+ - 115 :  : 'java/util/Collections$UnmodifiableCollection'
+ - 116 :  : 'java/util/Collections$UnmodifiableList'
+ - 117 :  : 'java/util/Collections$UnmodifiableMap'
+ - 118 :  : 'java/util/Collections$UnmodifiableRandomAccessList'
+ - 119 :  : 'java/util/Collections$UnmodifiableSet'
+ - 120 :  : 'java/util/Collections$UnmodifiableSortedMap'
+ - 121 :  : 'java/util/Collections$UnmodifiableSortedSet'
+ - 122 :  : 'java/util/Comparator'
+ - 123 :  : 'java/util/Enumeration'
+ - 124 :  : 'java/util/Iterator'
+ - 125 :  : 'java/util/List'
+ - 126 :  : 'java/util/ListIterator'
+ - 127 :  : 'java/util/Random'
+ - 128 :  : 'java/util/RandomAccess'
+ - 129 :  : 'java/util/Set'
+ - 130 :  : 'lastIndexOfSubList'
+ - 131 :  : 'list'
+ - 132 :  : 'listIterator'
+ - 133 :  : 'max'
+ - 134 :  : 'min'
+ - 135 :  : 'nCopies'
+ - 136 :  : 'newInstance'
+ - 137 :  : 'newSetFromMap'
+ - 138 :  : 'next'
+ - 139 :  : 'nextElement'
+ - 140 :  : 'nextIndex'
+ - 141 :  : 'nextInt'
+ - 142 :  : 'previous'
+ - 143 :  : 'r'
+ - 144 :  : 'replaceAll'
+ - 145 :  : 'reverse'
+ - 146 :  : 'reverseOrder'
+ - 147 :  : 'rotate'
+ - 148 :  : 'rotate1'
+ - 149 :  : 'rotate2'
+ - 150 :  : 'set'
+ - 151 :  : 'shuffle'
+ - 152 :  : 'singleton'
+ - 153 :  : 'singletonIterator'
+ - 154 :  : 'singletonList'
+ - 155 :  : 'singletonMap'
+ - 156 :  : 'size'
+ - 157 :  : 'sort'
+ - 158 :  : 'subList'
+ - 159 :  : 'swap'
+ - 160 :  : 'synchronizedCollection'
+ - 161 :  : 'synchronizedList'
+ - 162 :  : 'synchronizedMap'
+ - 163 :  : 'synchronizedSet'
+ - 164 :  : 'synchronizedSortedMap'
+ - 165 :  : 'synchronizedSortedSet'
+ - 166 :  : 'toArray'
+ - 167 :  : 'toString'
+ - 168 :  : 'unmodifiableCollection'
+ - 169 :  : 'unmodifiableList'
+ - 170 :  : 'unmodifiableMap'
+ - 171 :  : 'unmodifiableSet'
+ - 172 :  : 'unmodifiableSortedMap'
+ - 173 :  : 'unmodifiableSortedSet'
+ - 174 :  : 'zeroLengthArray'
+ - 175 :  : 5
+ - 176 :  : 10
+ - 177 :  : 11
+ - 178 :  : 18
+ - 179 :  : 25
+ - 180 :  : 35
+ - 181 :  : 100
+ - 182 :  : 5000
+ - 183 :  : '[Ljava/lang/Object;'
+ - 184 :  : 'java/lang/Comparable'
+ - 185 :  : 'java/lang/IllegalArgumentException'
+ - 186 :  : 'java/lang/IndexOutOfBoundsException'
+ - 187 :  : 'java/lang/Object'
+ - 188 :  : 'java/lang/StringBuilder'
+ - 189 :  : 'java/lang/reflect/Array'
+ - 190 :  : 'java/util/ArrayList'
+ - 191 :  : 'java/util/Arrays'
+ - 192 :  : 'java/util/Collection'
+ - 193 :  : 'java/util/Collections' {0x7aee2a08}
+ - 194 :  : 'java/util/Collections$1'
+ - 195 :  : 'java/util/Collections$2'
+ - 196 :  : 'java/util/Collections$AsLIFOQueue'
+ - 197 :  : 'java/util/Collections$CheckedCollection'
+ - 198 :  : 'java/util/Collections$CheckedList'
+ - 199 :  : 'java/util/Collections$CheckedMap'
+ - 200 :  : 'java/util/Collections$CheckedRandomAccessList'
+ - 201 :  : 'java/util/Collections$CheckedSet'
+ - 202 :  : 'java/util/Collections$CheckedSortedMap'
+ - 203 :  : 'java/util/Collections$CheckedSortedSet'
+ - 204 :  : 'java/util/Collections$CopiesList'
+ - 205 :  : 'java/util/Collections$EmptyEnumeration'
+ - 206 :  : 'java/util/Collections$EmptyIterator'
+ - 207 :  : 'java/util/Collections$EmptyList' {0x7aee5870}
+ - 208 :  : 'java/util/Collections$EmptyListIterator'
+ - 209 :  : 'java/util/Collections$EmptyMap' {0x7aee8938}
+ - 210 :  : 'java/util/Collections$EmptySet' {0x7aee43e0}
+ - 211 :  : 'java/util/Collections$ReverseComparator'
+ - 212 :  : 'java/util/Collections$ReverseComparator2'
+ - 213 :  : 'java/util/Collections$SelfComparable'
+ - 214 :  : 'java/util/Collections$SetFromMap'
+ - 215 :  : 'java/util/Collections$SingletonList'
+ - 216 :  : 'java/util/Collections$SingletonMap'
+ - 217 :  : 'java/util/Collections$SingletonSet'
+ - 218 :  : 'java/util/Collections$SynchronizedCollection'
+ - 219 :  : 'java/util/Collections$SynchronizedList'
+ - 220 :  : 'java/util/Collections$SynchronizedMap'
+ - 221 :  : 'java/util/Collections$SynchronizedRandomAccessList'
+ - 222 :  : 'java/util/Collections$SynchronizedSet' {0x7aeeafc8}
+ - 223 :  : 'java/util/Collections$SynchronizedSortedMap'
+ - 224 :  : 'java/util/Collections$SynchronizedSortedSet'
+ - 225 :  : 'java/util/Collections$UnmodifiableCollection'
+ - 226 :  : 'java/util/Collections$UnmodifiableList'
+ - 227 :  : 'java/util/Collections$UnmodifiableMap'
+ - 228 :  : 'java/util/Collections$UnmodifiableRandomAccessList'
+ - 229 :  : 'java/util/Collections$UnmodifiableSet'
+ - 230 :  : 'java/util/Collections$UnmodifiableSortedMap'
+ - 231 :  : 'java/util/Collections$UnmodifiableSortedSet'
+ - 232 :  : 'java/util/Comparator'
+ - 233 :  : 'java/util/Enumeration'
+ - 234 :  : 'java/util/Iterator'
+ - 235 :  : 'java/util/List'
+ - 236 :  : 'java/util/ListIterator'
+ - 237 :  : 'java/util/Random'
+ - 238 :  : 'java/util/RandomAccess'
+ - 239 :  : 'java/util/Set'
+ - 240 :  : 'Ljava/lang/SafeVarargs;'
+ - 241 :  : 'Ljava/util/Collections$EmptyEnumeration;'
+ - 242 :  : 'Ljava/util/Collections$EmptyIterator;'
+ - 243 :  : 'Ljava/util/Collections$EmptyListIterator;'
+ - 244 :  : 'Ljava/util/Collections$ReverseComparator;'
+ - 245 :  : 'Ljava/util/Comparator;'
+ - 246 :  : 'Ljava/util/List;'
+ - 247 :  : 'Ljava/util/Map;'
+ - 248 :  : 'Ljava/util/Random;'
+ - 249 :  : 'Ljava/util/Set;'
+ - 250 :  : '<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)[TT;'
+ - 251 :  : '<T:Ljava/lang/Object;>(Ljava/util/Collection<-TT;>;[TT;)Z'
+ - 252 :  : '<T:Ljava/lang/Object;>()Ljava/util/Comparator<TT;>;'
+ - 253 :  : '<T:Ljava/lang/Object;>()Ljava/util/Enumeration<TT;>;'
+ - 254 :  : '<E:Ljava/lang/Object;>(TE;)Ljava/util/Iterator<TE;>;'
+ - 255 :  : '<T:Ljava/lang/Object;>()Ljava/util/Iterator<TT;>;'
+ - 256 :  : '<T::Ljava/lang/Comparable<-TT;>;>(Ljava/util/List<TT;>;)V'
+ - 257 :  : '<T:Ljava/lang/Object;>()Ljava/util/List<TT;>;'
+ - 258 :  : '<T:Ljava/lang/Object;>(ITT;)Ljava/util/List<TT;>;'
+ - 259 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<-TT;>;TT;)V'
+ - 260 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;I)V'
+ - 261 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;TT;TT;)Z'
+ - 262 :  : '<T:Ljava/lang/Object;>(TT;)Ljava/util/List<TT;>;'
+ - 263 :  : '<T:Ljava/lang/Object;>()Ljava/util/ListIterator<TT;>;'
+ - 264 :  : '<T:Ljava/lang/Object;>(Ljava/util/ListIterator<+TT;>;I)TT;'
+ - 265 :  : '<T:Ljava/lang/Object;>()Ljava/util/Set<TT;>;'
+ - 266 :  : '<T:Ljava/lang/Object;>(TT;)Ljava/util/Set<TT;>;'
+ - 267 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<+Ljava/lang/Comparable<-TT;>;>;TT;)I'
+ - 268 :  : '<T:Ljava/lang/Object;>(Ljava/util/Enumeration<TT;>;)Ljava/util/ArrayList<TT;>;'
+ - 269 :  : '<T:Ljava/lang/Object;:Ljava/lang/Comparable<-TT;>;>(Ljava/util/Collection<+TT;>;)TT;'
+ - 270 :  : '<T:Ljava/lang/Object;>(Ljava/util/Collection<+TT;>;)Ljava/util/Collection<TT;>;'
+ - 271 :  : '<T:Ljava/lang/Object;>(Ljava/util/Collection<TT;>;)Ljava/util/Collection<TT;>;'
+ - 272 :  : '<T:Ljava/lang/Object;>(Ljava/util/Collection<+TT;>;Ljava/util/Comparator<-TT;>;)TT;'
+ - 273 :  : '<T:Ljava/lang/Object;>(Ljava/util/Comparator<TT;>;)Ljava/util/Comparator<TT;>;'
+ - 274 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<+TT;>;TT;Ljava/util/Comparator<-TT;>;)I'
+ - 275 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;Ljava/util/Comparator<-TT;>;)V'
+ - 276 :  : '<T:Ljava/lang/Object;>(Ljava/util/Collection<TT;>;)Ljava/util/Enumeration<TT;>;'
+ - 277 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<+TT;>;)Ljava/util/List<TT;>;'
+ - 278 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<-TT;>;Ljava/util/List<+TT;>;)V'
+ - 279 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;)Ljava/util/List<TT;>;'
+ - 280 :  : '<K:Ljava/lang/Object;V:Ljava/lang/Object;>()Ljava/util/Map<TK;TV;>;'
+ - 281 :  : '<K:Ljava/lang/Object;V:Ljava/lang/Object;>(TK;TV;)Ljava/util/Map<TK;TV;>;'
+ - 282 :  : '<T:Ljava/lang/Object;>(Ljava/util/Deque<TT;>;)Ljava/util/Queue<TT;>;'
+ - 283 :  : '<T:Ljava/lang/Object;>(Ljava/util/Set<+TT;>;)Ljava/util/Set<TT;>;'
+ - 284 :  : '<T:Ljava/lang/Object;>(Ljava/util/Set<TT;>;)Ljava/util/Set<TT;>;'
+ - 285 :  : '<T:Ljava/lang/Object;>(Ljava/util/SortedSet<TT;>;)Ljava/util/SortedSet<TT;>;'
+ - 286 :  : '<E:Ljava/lang/Object;>(Ljava/util/Collection<TE;>;Ljava/lang/Class<TE;>;)Ljava/util/Collection<TE;>;'
+ - 287 :  : '<T:Ljava/lang/Object;>(Ljava/util/Collection<TT;>;Ljava/lang/Object;)Ljava/util/Collection<TT;>;'
+ - 288 :  : '<E:Ljava/lang/Object;>(Ljava/util/List<TE;>;Ljava/lang/Class<TE;>;)Ljava/util/List<TE;>;'
+ - 289 :  : '<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;Ljava/lang/Object;)Ljava/util/List<TT;>;'
+ - 290 :  : '<K:Ljava/lang/Object;V:Ljava/lang/Object;>(Ljava/util/Map<+TK;+TV;>;)Ljava/util/Map<TK;TV;>;'
+ - 291 :  : '<K:Ljava/lang/Object;V:Ljava/lang/Object;>(Ljava/util/Map<TK;TV;>;)Ljava/util/Map<TK;TV;>;'
+ - 292 :  : '<E:Ljava/lang/Object;>(Ljava/util/Map<TE;Ljava/lang/Boolean;>;)Ljava/util/Set<TE;>;'
+ - 293 :  : '<E:Ljava/lang/Object;>(Ljava/util/Set<TE;>;Ljava/lang/Class<TE;>;)Ljava/util/Set<TE;>;'
+ - 294 :  : '<T:Ljava/lang/Object;>(Ljava/util/Set<TT;>;Ljava/lang/Object;)Ljava/util/Set<TT;>;'
+ - 295 :  : '<K:Ljava/lang/Object;V:Ljava/lang/Object;>(Ljava/util/SortedMap<TK;+TV;>;)Ljava/util/SortedMap<TK;TV;>;'
+ - 296 :  : '<K:Ljava/lang/Object;V:Ljava/lang/Object;>(Ljava/util/SortedMap<TK;TV;>;)Ljava/util/SortedMap<TK;TV;>;'
+ - 297 :  : '<E:Ljava/lang/Object;>(Ljava/util/SortedSet<TE;>;Ljava/lang/Class<TE;>;)Ljava/util/SortedSet<TE;>;'
+ - 298 :  : '<K:Ljava/lang/Object;V:Ljava/lang/Object;>(Ljava/util/Map<TK;TV;>;Ljava/lang/Class<TK;>;Ljava/lang/Class<TV;>;)Ljava/util/Map<TK;TV;>;'
+ - 299 :  : '<K:Ljava/lang/Object;V:Ljava/lang/Object;>(Ljava/util/SortedMap<TK;TV;>;Ljava/lang/Class<TK;>;Ljava/lang/Class<TV;>;)Ljava/util/SortedMap<TK;TV;>;'
+ - 300 :  : '()Ljava/lang/Object;'
+ - 301 :  : '()[Ljava/lang/Object;'
+ - 302 :  : '(I)Ljava/lang/Object;'
+ - 303 :  : '(ILjava/lang/Object;)V'
+ - 304 :  : '(Ljava/lang/Object;)I'
+ - 305 :  : '(Ljava/lang/Object;)V'
+ - 306 :  : '([Ljava/lang/Object;)V'
+ - 307 :  : '([Ljava/lang/Object;II)V'
+ - 308 :  : '(I)Ljava/lang/StringBuilder;'
+ - 309 :  : '(Ljava/util/Collection;)V'
+ - 310 :  : '(Ljava/util/Collections$1;)V'
+ - 311 :  : '()Ljava/util/Comparator;'
+ - 312 :  : '(Ljava/util/Comparator;)V'
+ - 313 :  : '(Ljava/util/Deque;)V'
+ - 314 :  : '()Ljava/util/Enumeration;'
+ - 315 :  : '()Ljava/util/Iterator;'
+ - 316 :  : '()Ljava/util/List;'
+ - 317 :  : '(II)Ljava/util/List;'
+ - 318 :  : '(Ljava/util/List;)V'
+ - 319 :  : '(Ljava/util/List;I)V'
+ - 320 :  : '(Ljava/util/List;II)V'
+ - 321 :  : '(Ljava/util/List<*>;)V'
+ - 322 :  : '(Ljava/util/List<*>;I)V'
+ - 323 :  : '(Ljava/util/List<*>;II)V'
+ - 324 :  : '()Ljava/util/ListIterator;'
+ - 325 :  : '(I)Ljava/util/ListIterator;'
+ - 326 :  : '()Ljava/util/Map;'
+ - 327 :  : '(Ljava/util/Map;)V'
+ - 328 :  : '()Ljava/util/Set;'
+ - 329 :  : '(Ljava/util/Set;)V'
+ - 330 :  : '(Ljava/util/SortedMap;)V'
+ - 331 :  : '(Ljava/util/SortedSet;)V'
+ - 332 :  : '(Ljava/util/Collection;Ljava/lang/Class;)V'
+ - 333 :  : '(Ljava/util/List;Ljava/lang/Class;)V'
+ - 334 :  : '(Ljava/util/Set;Ljava/lang/Class;)V'
+ - 335 :  : '(Ljava/util/SortedSet;Ljava/lang/Class;)V'
+ - 336 :  : '(Ljava/lang/Class;)[Ljava/lang/Object;'
+ - 337 :  : '(Ljava/lang/Class;I)Ljava/lang/Object;'
+ - 338 :  : '(ILjava/lang/Object;)Ljava/lang/Object;'
+ - 339 :  : '(Ljava/lang/Object;Ljava/lang/Object;)I'
+ - 340 :  : '(Ljava/lang/Object;Ljava/lang/Object;)V'
+ - 341 :  : '(Ljava/lang/Object;Ljava/lang/Object;)Z'
+ - 342 :  : '(Ljava/util/Collection;)Ljava/lang/Object;'
+ - 343 :  : '(Ljava/util/Collection;Ljava/lang/Object;)I'
+ - 344 :  : '(Ljava/util/Collection;Ljava/lang/Object;)V'
+ - 345 :  : '(Ljava/util/Collection;[Ljava/lang/Object;)Z'
+ - 346 :  : '(Ljava/util/Collection<*>;Ljava/lang/Object;)I'
+ - 347 :  : '(Ljava/util/List;Ljava/lang/Object;)I'
+ - 348 :  : '(Ljava/util/List;Ljava/lang/Object;)V'
+ - 349 :  : '(Ljava/util/ListIterator;I)Ljava/lang/Object;'
+ - 350 :  : '(Ljava/util/Set;Ljava/lang/Object;)V'
+ - 351 :  : '(Ljava/lang/String;)Ljava/lang/StringBuilder;'
+ - 352 :  : '(Ljava/util/Enumeration;)Ljava/util/ArrayList;'
+ - 353 :  : '(Ljava/util/Collection;)Ljava/util/Collection;'
+ - 354 :  : '(Ljava/util/Collection;Ljava/util/Collection;)Z'
+ - 355 :  : '(Ljava/util/Collection<*>;Ljava/util/Collection<*>;)Z'
+ - 356 :  : '([Ljava/lang/Object;Ljava/util/Comparator;)V'
+ - 357 :  : '(Ljava/util/Comparator;)Ljava/util/Comparator;'
+ - 358 :  : '(Ljava/util/List;Ljava/util/Comparator;)V'
+ - 359 :  : '(Ljava/util/Collection;)Ljava/util/Enumeration;'
+ - 360 :  : '(Ljava/lang/Object;)Ljava/util/Iterator;'
+ - 361 :  : '(ILjava/lang/Object;)Ljava/util/List;'
+ - 362 :  : '(Ljava/lang/Object;)Ljava/util/List;'
+ - 363 :  : '(Ljava/util/List;)Ljava/util/List;'
+ - 364 :  : '(Ljava/util/List;Ljava/util/List;)I'
+ - 365 :  : '(Ljava/util/List;Ljava/util/List;)V'
+ - 366 :  : '(Ljava/util/List<*>;Ljava/util/List<*>;)I'
+ - 367 :  : '(Ljava/util/Map;)Ljava/util/Map;'
+ - 368 :  : '(Ljava/util/Deque;)Ljava/util/Queue;'
+ - 369 :  : '(Ljava/util/List;Ljava/util/Random;)V'
+ - 370 :  : '(Ljava/util/List<*>;Ljava/util/Random;)V'
+ - 371 :  : '(Ljava/lang/Object;)Ljava/util/Set;'
+ - 372 :  : '(Ljava/util/Map;)Ljava/util/Set;'
+ - 373 :  : '(Ljava/util/Set;)Ljava/util/Set;'
+ - 374 :  : '(Ljava/util/SortedMap;)Ljava/util/SortedMap;'
+ - 375 :  : '(Ljava/util/SortedSet;)Ljava/util/SortedSet;'
+ - 376 :  : '(Ljava/util/Map;Ljava/lang/Class;Ljava/lang/Class;)V'
+ - 377 :  : '(Ljava/util/SortedMap;Ljava/lang/Class;Ljava/lang/Class;)V'
+ - 378 :  : '(Ljava/util/List;Ljava/lang/Object;Ljava/lang/Object;)Z'
+ - 379 :  : '(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;'
+ - 380 :  : '(Ljava/util/Collection;Ljava/lang/Class;)Ljava/util/Collection;'
+ - 381 :  : '(Ljava/util/Collection;Ljava/lang/Object;)Ljava/util/Collection;'
+ - 382 :  : '(Ljava/util/List;Ljava/lang/Object;Ljava/util/Comparator;)I'
+ - 383 :  : '(Ljava/util/List;Ljava/lang/Class;)Ljava/util/List;'
+ - 384 :  : '(Ljava/util/List;Ljava/lang/Object;)Ljava/util/List;'
+ - 385 :  : '(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;'
+ - 386 :  : '(Ljava/util/Set;Ljava/lang/Class;)Ljava/util/Set;'
+ - 387 :  : '(Ljava/util/Set;Ljava/lang/Object;)Ljava/util/Set;'
+ - 388 :  : '(Ljava/util/SortedSet;Ljava/lang/Class;)Ljava/util/SortedSet;'
+ - 389 :  : '(Ljava/util/Map;Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/Map;'
+ - 390 :  : '(Ljava/util/SortedMap;Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/SortedMap;'
+ - 391 :  : name_index=16 signature_index=241
+ - 392 :  : name_index=17 signature_index=242
+ - 393 :  : name_index=17 signature_index=243
+ - 394 :  : name_index=29 signature_index=244
+ - 395 :  : name_index=50 signature_index=245
+ - 396 :  : name_index=18 signature_index=246
+ - 397 :  : name_index=19 signature_index=247
+ - 398 :  : name_index=143 signature_index=248
+ - 399 :  : name_index=20 signature_index=249
+ - 400 :  : name_index=140 signature_index=3
+ - 401 :  : name_index=156 signature_index=3
+ - 402 :  : name_index=11 signature_index=5
+ - 403 :  : name_index=68 signature_index=6
+ - 404 :  : name_index=69 signature_index=6
+ - 405 :  : name_index=141 signature_index=7
+ - 406 :  : name_index=138 signature_index=300
+ - 407 :  : name_index=139 signature_index=300
+ - 408 :  : name_index=142 signature_index=300
+ - 409 :  : name_index=166 signature_index=301
+ - 410 :  : name_index=67 signature_index=302
+ - 411 :  : name_index=11 signature_index=303
+ - 412 :  : name_index=52 signature_index=304
+ - 413 :  : name_index=11 signature_index=305
+ - 414 :  : name_index=150 signature_index=305
+ - 415 :  : name_index=39 signature_index=8
+ - 416 :  : name_index=53 signature_index=8
+ - 417 :  : name_index=64 signature_index=8
+ - 418 :  : name_index=157 signature_index=306
+ - 419 :  : name_index=159 signature_index=307
+ - 420 :  : name_index=167 signature_index=4
+ - 421 :  : name_index=11 signature_index=9
+ - 422 :  : name_index=41 signature_index=308
+ - 423 :  : name_index=11 signature_index=309
+ - 424 :  : name_index=11 signature_index=310
+ - 425 :  : name_index=146 signature_index=311
+ - 426 :  : name_index=11 signature_index=312
+ - 427 :  : name_index=11 signature_index=313
+ - 428 :  : name_index=72 signature_index=315
+ - 429 :  : name_index=158 signature_index=317
+ - 430 :  : name_index=11 signature_index=318
+ - 431 :  : name_index=145 signature_index=318
+ - 432 :  : name_index=148 signature_index=319
+ - 433 :  : name_index=149 signature_index=319
+ - 434 :  : name_index=159 signature_index=320
+ - 435 :  : name_index=132 signature_index=324
+ - 436 :  : name_index=132 signature_index=325
+ - 437 :  : name_index=11 signature_index=327
+ - 438 :  : name_index=11 signature_index=329
+ - 439 :  : name_index=11 signature_index=330
+ - 440 :  : name_index=11 signature_index=331
+ - 441 :  : name_index=11 signature_index=332
+ - 442 :  : name_index=11 signature_index=333
+ - 443 :  : name_index=11 signature_index=334
+ - 444 :  : name_index=11 signature_index=335
+ - 445 :  : name_index=136 signature_index=337
+ - 446 :  : name_index=150 signature_index=338
+ - 447 :  : name_index=51 signature_index=339
+ - 448 :  : name_index=11 signature_index=340
+ - 449 :  : name_index=63 signature_index=341
+ - 450 :  : name_index=133 signature_index=342
+ - 451 :  : name_index=134 signature_index=342
+ - 452 :  : name_index=11 signature_index=344
+ - 453 :  : name_index=43 signature_index=347
+ - 454 :  : name_index=71 signature_index=347
+ - 455 :  : name_index=73 signature_index=347
+ - 456 :  : name_index=11 signature_index=348
+ - 457 :  : name_index=67 signature_index=349
+ - 458 :  : name_index=11 signature_index=350
+ - 459 :  : name_index=41 signature_index=351
+ - 460 :  : name_index=157 signature_index=356
+ - 461 :  : name_index=151 signature_index=369
+ - 462 :  : name_index=11 signature_index=376
+ - 463 :  : name_index=11 signature_index=377
+ - 464 :  : name_index=71 signature_index=382
+ - 465 :  : name_index=73 signature_index=382
+ - 466 :  : klass_index=193 name_and_type_index=396
+ - 467 :  : klass_index=193 name_and_type_index=397
+ - 468 :  : klass_index=193 name_and_type_index=398
+ - 469 :  : klass_index=193 name_and_type_index=399
+ - 470 :  : klass_index=205 name_and_type_index=391
+ - 471 :  : klass_index=206 name_and_type_index=392
+ - 472 :  : klass_index=208 name_and_type_index=393
+ - 473 :  : klass_index=211 name_and_type_index=394
+ - 474 :  : klass_index=212 name_and_type_index=395
+ - 475 :  : klass_index=185 name_and_type_index=421
+ - 476 :  : klass_index=186 name_and_type_index=421
+ - 477 :  : klass_index=187 name_and_type_index=402
+ - 478 :  : klass_index=187 name_and_type_index=417
+ - 479 :  : klass_index=188 name_and_type_index=402
+ - 480 :  : klass_index=188 name_and_type_index=420
+ - 481 :  : klass_index=188 name_and_type_index=422
+ - 482 :  : klass_index=188 name_and_type_index=459
+ - 483 :  : klass_index=189 name_and_type_index=445
+ - 484 :  : klass_index=190 name_and_type_index=402
+ - 485 :  : klass_index=190 name_and_type_index=415
+ - 486 :  : klass_index=191 name_and_type_index=418
+ - 487 :  : klass_index=191 name_and_type_index=460
+ - 488 :  : klass_index=193 name_and_type_index=419
+ - 489 :  : klass_index=193 name_and_type_index=425
+ - 490 :  : klass_index=193 name_and_type_index=431
+ - 491 :  : klass_index=193 name_and_type_index=432
+ - 492 :  : klass_index=193 name_and_type_index=433
+ - 493 :  : klass_index=193 name_and_type_index=434
+ - 494 :  : klass_index=193 name_and_type_index=449
+ - 495 :  : klass_index=193 name_and_type_index=450
+ - 496 :  : klass_index=193 name_and_type_index=451
+ - 497 :  : klass_index=193 name_and_type_index=453
+ - 498 :  : klass_index=193 name_and_type_index=454
+ - 499 :  : klass_index=193 name_and_type_index=455
+ - 500 :  : klass_index=193 name_and_type_index=457
+ - 501 :  : klass_index=193 name_and_type_index=461
+ - 502 :  : klass_index=193 name_and_type_index=464
+ - 503 :  : klass_index=193 name_and_type_index=465
+ - 504 :  : klass_index=194 name_and_type_index=413
+ - 505 :  : klass_index=195 name_and_type_index=423
+ - 506 :  : klass_index=196 name_and_type_index=427
+ - 507 :  : klass_index=197 name_and_type_index=441
+ - 508 :  : klass_index=198 name_and_type_index=442
+ - 509 :  : klass_index=199 name_and_type_index=462
+ - 510 :  : klass_index=200 name_and_type_index=442
+ - 511 :  : klass_index=201 name_and_type_index=443
+ - 512 :  : klass_index=202 name_and_type_index=463
+ - 513 :  : klass_index=203 name_and_type_index=444
+ - 514 :  : klass_index=204 name_and_type_index=411
+ - 515 :  : klass_index=207 name_and_type_index=424
+ - 516 :  : klass_index=209 name_and_type_index=424
+ - 517 :  : klass_index=210 name_and_type_index=424
+ - 518 :  : klass_index=212 name_and_type_index=426
+ - 519 :  : klass_index=214 name_and_type_index=437
+ - 520 :  : klass_index=215 name_and_type_index=413
+ - 521 :  : klass_index=216 name_and_type_index=448
+ - 522 :  : klass_index=217 name_and_type_index=413
+ - 523 :  : klass_index=218 name_and_type_index=423
+ - 524 :  : klass_index=218 name_and_type_index=452
+ - 525 :  : klass_index=219 name_and_type_index=430
+ - 526 :  : klass_index=219 name_and_type_index=456
+ - 527 :  : klass_index=220 name_and_type_index=437
+ - 528 :  : klass_index=221 name_and_type_index=430
+ - 529 :  : klass_index=221 name_and_type_index=456
+ - 530 :  : klass_index=222 name_and_type_index=438
+ - 531 :  : klass_index=222 name_and_type_index=458
+ - 532 :  : klass_index=223 name_and_type_index=439
+ - 533 :  : klass_index=224 name_and_type_index=440
+ - 534 :  : klass_index=225 name_and_type_index=423
+ - 535 :  : klass_index=226 name_and_type_index=430
+ - 536 :  : klass_index=227 name_and_type_index=437
+ - 537 :  : klass_index=228 name_and_type_index=430
+ - 538 :  : klass_index=229 name_and_type_index=438
+ - 539 :  : klass_index=230 name_and_type_index=439
+ - 540 :  : klass_index=231 name_and_type_index=440
+ - 541 :  : klass_index=237 name_and_type_index=402
+ - 542 :  : klass_index=237 name_and_type_index=405
+ - 543 :  : klass_index=184 name_and_type_index=412
+ - 544 :  : klass_index=192 name_and_type_index=401
+ - 545 :  : klass_index=192 name_and_type_index=415
+ - 546 :  : klass_index=192 name_and_type_index=416
+ - 547 :  : klass_index=192 name_and_type_index=428
+ - 548 :  : klass_index=232 name_and_type_index=447
+ - 549 :  : klass_index=233 name_and_type_index=403
+ - 550 :  : klass_index=233 name_and_type_index=407
+ - 551 :  : klass_index=234 name_and_type_index=404
+ - 552 :  : klass_index=234 name_and_type_index=406
+ - 553 :  : klass_index=235 name_and_type_index=401
+ - 554 :  : klass_index=235 name_and_type_index=409
+ - 555 :  : klass_index=235 name_and_type_index=410
+ - 556 :  : klass_index=235 name_and_type_index=429
+ - 557 :  : klass_index=235 name_and_type_index=435
+ - 558 :  : klass_index=235 name_and_type_index=436
+ - 559 :  : klass_index=235 name_and_type_index=446
+ - 560 :  : klass_index=236 name_and_type_index=400
+ - 561 :  : klass_index=236 name_and_type_index=406
+ - 562 :  : klass_index=236 name_and_type_index=408
+ - 563 :  : klass_index=236 name_and_type_index=414
+ - 564 :  : 'AsLIFOQueue'
+ - 565 :  : 'CheckedCollection'
+ - 566 :  : 'CheckedList'
+ - 567 :  : 'CheckedMap'
+ - 568 :  : 'CheckedRandomAccessList'
+ - 569 :  : 'CheckedSet'
+ - 570 :  : 'CheckedSortedMap'
+ - 571 :  : 'CheckedSortedSet'
+ - 572 :  : 'Collections.java'
+ - 573 :  : 'CopiesList'
+ - 574 :  : 'EmptyEnumeration'
+ - 575 :  : 'EmptyIterator'
+ - 576 :  : 'EmptyListIterator'
+ - 577 :  : 'EmptyMap'
+ - 578 :  : 'EmptySet'
+ - 579 :  : 'ReverseComparator'
+ - 580 :  : 'ReverseComparator2'
+ - 581 :  : 'SelfComparable'
+ - 582 :  : 'SetFromMap'
+ - 583 :  : 'SingletonList'
+ - 584 :  : 'SingletonMap'
+ - 585 :  : 'SingletonSet'
+ - 586 :  : 'SynchronizedCollection'
+ - 587 :  : 'SynchronizedList'
+ - 588 :  : 'SynchronizedMap'
+ - 589 :  : 'SynchronizedRandomAccessList'
+ - 590 :  : 'SynchronizedSet'
+ - 591 :  : 'SynchronizedSortedMap'
+ - 592 :  : 'SynchronizedSortedSet'
+ - 593 :  : 'UnmodifiableCollection'
+ - 594 :  : 'UnmodifiableList'
+ - 595 :  : 'UnmodifiableMap'
+ - 596 :  : 'UnmodifiableRandomAccessList'
+ - 597 :  : 'UnmodifiableSet'
+ - 598 :  : 'UnmodifiableSortedMap'
+ - 599 :  : 'UnmodifiableSortedSet'
+
+RDI=0x0000000000000020 is an unknown value
+R8 =0x00000000000000b5 is an unknown value
+R9 =0x00000000000000cb is an unknown value
+R10=0x00000000583518e0 is an unknown value
+R11=0x000000000000000c is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000002376981 is at code_begin+4705 in an Interpreter codelet
+return entry points  [0x0000000002375720, 0x0000000002377520]  7680 bytes
+R14=0x00000000022cf070 is pointing into the stack for thread: 0x0000000001c5e000
+R15=0x0000000001c5e000 is a thread
+
+
+Stack: [0x00000000021d0000,0x00000000022d0000],  sp=0x00000000022cf070,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+j  java.util.Hashtable.putAll(Ljava/util/Map;)V+1
+j  sun.misc.VM.saveAndRemoveProperties(Ljava/util/Properties;)V+20
+j  java.lang.System.initializeSystemClass()V+20
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1cf7f3]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000adb6000 JavaThread "Finalizer" daemon [_thread_blocked, id=7012, stack(0x000000000d3f0000,0x000000000d4f0000)]
+  0x000000000217a800 JavaThread "Reference Handler" daemon [_thread_blocked, id=6008, stack(0x000000000d160000,0x000000000d260000)]
+=>0x0000000001c5e000 JavaThread "main" [_thread_in_Java, id=1964, stack(0x00000000021d0000,0x00000000022d0000)]
+
+Other Threads:
+  0x000000000adad000 VMThread [stack: 0x000000000cf80000,0x000000000d080000] [id=5848]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 76800K, used 2642K [0x00000007d5500000, 0x00000007daa80000, 0x0000000800000000)
+  eden space 66048K, 4% used [0x00000007d5500000,0x00000007d5794898,0x00000007d9580000)
+  from space 10752K, 0% used [0x00000007da000000,0x00000007da000000,0x00000007daa80000)
+  to   space 10752K, 0% used [0x00000007d9580000,0x00000007d9580000,0x00000007da000000)
+ ParOldGen       total 174592K, used 0K [0x0000000780000000, 0x000000078aa80000, 0x00000007d5500000)
+  object space 174592K, 0% used [0x0000000780000000,0x0000000780000000,0x000000078aa80000)
+ PSPermGen       total 21504K, used 941K [0x000000077ae00000, 0x000000077c300000, 0x0000000780000000)
+  object space 21504K, 4% used [0x000000077ae00000,0x000000077aeeb6f8,0x000000077c300000)
+
+Card table byte_map: [0x0000000005430000,0x0000000005860000] byte_map_base: 0x0000000001859000
+
+Polling page: 0x00000000001c0000
+
+Code Cache  [0x0000000002370000, 0x00000000025e0000, 0x0000000005370000)
+ total_blobs=76 nmethods=0 adapters=53 free_code_cache=48818Kb largest_free_block=49989376
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.021 loading class 0x000000000abfa8f0
+Event: 0.021 loading class 0x000000000abfa8f0 done
+Event: 0.021 loading class 0x000000000abfa960
+Event: 0.022 loading class 0x000000000abfd770
+Event: 0.022 loading class 0x000000000abfd770 done
+Event: 0.022 loading class 0x000000000abfa960 done
+Event: 0.022 loading class 0x000000000abfac20
+Event: 0.022 loading class 0x000000000abfab30
+Event: 0.022 loading class 0x000000000abfab30 done
+Event: 0.022 loading class 0x000000000abfac20 done
+
+
+Dynamic libraries:
+0x000000013fed0000 - 0x000000013ff03000 	C:\Program Files\Java\jdk1.7.0_79\bin\java.exe
+0x00000000779b0000 - 0x0000000077b5a000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077790000 - 0x00000000778af000 	C:\Windows\system32\kernel32.dll
+0x000007fefda70000 - 0x000007fefdada000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefdaf0000 - 0x000007fefdbcb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feffc00000 - 0x000007feffc9f000 	C:\Windows\system32\msvcrt.dll
+0x000007feffca0000 - 0x000007feffcbf000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff590000 - 0x000007feff6bd000 	C:\Windows\system32\RPCRT4.dll
+0x00000000778b0000 - 0x00000000779aa000 	C:\Windows\system32\USER32.dll
+0x000007feff7a0000 - 0x000007feff807000 	C:\Windows\system32\GDI32.dll
+0x000007fefe1c0000 - 0x000007fefe1ce000 	C:\Windows\system32\LPK.dll
+0x000007feffab0000 - 0x000007feffb7a000 	C:\Windows\system32\USP10.dll
+0x000007fefc140000 - 0x000007fefc334000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefe3b0000 - 0x000007fefe421000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe7d0000 - 0x000007fefe7fe000 	C:\Windows\system32\IMM32.DLL
+0x000007feff9a0000 - 0x000007feffaa9000 	C:\Windows\system32\MSCTF.dll
+0x000000006b970000 - 0x000000006ba42000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\msvcr100.dll
+0x0000000057c00000 - 0x00000000583d5000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\server\jvm.dll
+0x000007fef8840000 - 0x000007fef8849000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefe490000 - 0x000007fefe4dd000 	C:\Windows\system32\WS2_32.dll
+0x000007fefdc70000 - 0x000007fefdc78000 	C:\Windows\system32\NSI.dll
+0x000007fefb360000 - 0x000007fefb39b000 	C:\Windows\system32\WINMM.dll
+0x0000000077b80000 - 0x0000000077b87000 	C:\Windows\system32\PSAPI.DLL
+0x000000006bdf0000 - 0x000000006bdff000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\verify.dll
+0x000000006bdc0000 - 0x000000006bde8000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\java.dll
+0x000000006bda0000 - 0x000000006bdb5000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\zip.dll
+0x000007fef9090000 - 0x000007fef91b5000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Xmx2048M -Dcom.android.sdkmanager.toolsdir=C:/Users/Robert/AppData/Local/Android/sdk\tools -Dfile.encoding=UTF8 
+java_command: C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer/Tools\sdktools.jar -
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\
+USERNAME=Robert
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 8 (8 cores per cpu, 1 threads per core) family 21 model 2 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 16775348k(11513364k free), swap 33548840k(27329992k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.79-b02) for windows-amd64 JRE (1.7.0_79-b15), built on Apr 10 2015 12:36:16 by "java_re" with unknown MS VC++:1600
+
+time: Tue Apr 26 13:21:26 2016
+elapsed time: 0 seconds
+
